@@ -5,40 +5,124 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
   <title>Frontend Mentor | E-commerce product page</title>
+    <link rel="stylesheet" href="style.css">
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  
 </head>
 <body>
+    <div class="n"></div>
+      <header class="header">
+          <nav class="nav">
+              <button type="button" class="logo-menu">
+                  <img src="./images/icon-menu.svg" alt="">  
+              </button>
+              <div class="sneakers">Sneakers</div>
+                <div class="nav-link">
+                    <button class="close">
+                        <img src="./images/icon-close.svg" alt="">
+                    </button>
+                <ul>
+                    <li><a href="#"> Collections</a></li>
+                    <li><a href="">Men</a></li>
+                    <li><a href="">Women</a></li>
+                    <li><a href="">About</a></li>
+                    <li><a href="">Contact</a></li>
+                </ul>
+                </div>
+                <div class="cart-pseudo">
+                    <button type="button" class="btn-cart">
+                        <img src="./images/icon-cart.svg" alt="">
+                    </button>
+                    <div><img src="./images/image-avatar.png" alt=""></div>
+            </div>
+          </nav>
+      </header>
+      <main>
+        <section>
+            <div class="container">
+                <div class="container-img">
+                   
+                    <div class="slider">
+                        <div class="btn-slider">
+                            <button type="button" class="btn-prev">
+                             <img src="./images/icon-previous.svg" alt="">
+                            </button>
+                            <button type="button" class="btn-next">
+                                <img src="./images/icon-next.svg" alt="">
+                               </button>
+                        </div>
+                        <div class="slider_img">
+                            <img src="./images/image-product-1.jpg" alt="">
+                            <img src="./images/image-product-2.jpg" alt="">
+                            <img src="./images/image-product-3.jpg" alt="">
+                            <img src="./images/image-product-4.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="show-img">
+                        <img src="./images/image-product-1-thumbnail.jpg" alt=""  class="img_large" >
+                    </div>
+                    <div class="img-small">
+                        <a href="" class="img-item" data-large="./images/image-product-1.jpg">
+                            <img src="./images/image-product-1-thumbnail.jpg" alt=""  >
+                        </a>
+                        <a href="" class="img-item" data-large="./images/image-product-2.jpg">
+                            <img src="./images/image-product-2-thumbnail.jpg" alt="" >
+                        </a>
+                        <a href="" class="img-item" data-large="./images/image-product-3.jpg">
+                            <img src="./images/image-product-3-thumbnail.jpg" alt="" >
+                        </a>
+                        <a href="" class="img-item" data-large="./images/image-product-4.jpg">
+                            <img src="./images/image-product-4-thumbnail.jpg" alt="" >
+                        </a>
+                    </div>
+                </div>
+                <div class="container-info ">
+                    <span class="nameCompany">Sneaker Company</span>
+                    <h1 class="title">Fall Limited Edition Sneakers</h1>
+                    <p class="body">These low-profile sneakers are your perfect casual wear companion. Featuring a 
+                        durable rubber outer sole, they’ll withstand everything the weather can offer.
+                    </p>    
+                    <p class="total-price"> 
+                        <span class="price">$125.00</span>
+                        <span class="reduct">50%</span>
+                        <span class="FalsePrice">$250.00</span>
+                    </p>
+                    <div class="conpteur">
+                        <div class="nbr">
+                            <button type="button" class="btn-moins ">
+                                <img src="./images/icon-minus.svg" alt="">
+                            </button>
+                            <div class="number">0</div>
+                            <button type="button" class="btn-plus">
+                                <img src="./images/icon-plus.svg" alt="">
+                            </button>
+                        </div>
+                        <button type="button " class="add-btn-cart" >
+                            <img src="./images/icon-cart.svg" alt=""> Add to Cart
+                        </button>
+                    </div>
+                        
+                       
 
-  Collections
-  Men
-  Women
-  About
-  Contact
-
-  Sneaker Company
-
-  Fall Limited Edition Sneakers
-
-  These low-profile sneakers are your perfect casual wear companion. Featuring a 
-  durable rubber outer sole, they’ll withstand everything the weather can offer.
-
-  $125.00
-  50%
-  $250.00
-
-  0
-  Add to cart
+                        
+                </div>
+            </div>
+        </section>
+      </main>
+ 
   
-  <div class="attribution">
+
+  
+  
+
+  
+  
+  <!-- <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
-  </div>
+  </div> -->
+  <script src="main.js"></script>
 </body>
 </html>
