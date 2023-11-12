@@ -7,12 +7,16 @@ const slider_img = document.querySelector('.slider_img')
 const img = slider_img.querySelectorAll('img')
 const widthSlider = slider_img.offsetWidth
 const nbr_img = slider_img.children.length
-
+const Img_smallContainer = document.querySelector('.img-small')
 const Img_small = document.querySelectorAll('.img-small  a')
 const Img_large = document.querySelector('.img_large')
 const btnMoins = document.querySelector('.btn-moins')
 const btnPlus = document.querySelector('.btn-plus')
 const numbreAchat = document.querySelector('.number')
+const btnCart = document.querySelector('.cart-pseudo .btn-cart')
+const TemplateCartShopping = document.querySelector('#template-cart-menu')
+const AddToCart = document.querySelector('.add-btn-cart')
+const BtnDelete = document.querySelector('.btn-delete')
 
 
 //for show the menu
@@ -58,9 +62,10 @@ Img_small.forEach((el)=>{
 function OnClickChangeImage(e){
     e.preventDefault()
     const a = e.currentTarget
+    Img_smallContainer.querySelector('.active').classList.remove('active')
+    a.classList.add('active')
     const src = a.dataset.large
     Img_large.setAttribute('src',src)
-    console.log(src)
 }
 //for Add the number of shoes
 btnPlus.addEventListener('click' ,(e)=>{
@@ -74,6 +79,23 @@ btnMoins.addEventListener('click' ,(e)=>{
     }
 })
 
+btnCart.addEventListener('click',(e)=>{
+    e.preventDefault()
+    document.querySelector('.cart-menu').classList.toggle('active')
+})
 
+AddToCart.addEventListener('click', (e)=>{
+    e.preventDefault()
+    const newAdd = TemplateCartShopping.content.cloneNode(true)
+    const sum = `$125.00 x ${numbreAchat.innerHTML} = $${ 125*numbreAchat.innerHTML}.00`
+    newAdd.querySelector('.cart-menu-desc p').innerHTML = sum
+    const supp = TemplateCartShopping.content.cloneNode(true).querySelector('button')
+    supp.addEventListener('click', (e)=>DeleteElement(e) )
+    document.querySelector('.cart-menu-body ul').append(newAdd)
+})
 
+// .addEventListener('click', (e)=> DeleteElement(e))
+function DeleteElement(e){
+    console.log(e.target)
+}
 

@@ -145,6 +145,73 @@ nav{
     font-size: 1.3rem;
     color: hsl(26, 100%, 55%);
 }
+.cart-menu{
+    display: none;
+}
+.cart-menu.active{
+    display: block;
+    position: absolute;
+    top: 70px;
+    right: 100px;
+    width: 350px;
+    background-color: #fff;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+.cart-menu .cart-menu-body {
+    padding: 0 10px;
+}
+.cart-menu .cart-menu-title{
+    padding-left:15px ;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+}
+.cart-menu .cart-menu-title::after{
+    content: "";
+    width: 100%;
+    display: block;
+    height: 1px;
+    background-color: hsl(220, 14%, 75%);
+    margin-top: 20px;
+}
+.cart-menu li{
+    position: relative;
+    list-style-type:none ;
+    margin-bottom: 10px ;
+
+}
+.cart-menu .cart-menu-img{
+    position: absolute;
+    width: 50px;
+    top: 10px;
+    left: 5px;
+}
+.cart-menu .cart-menu-img img{
+    border-radius: 5px;
+}
+.cart-menu .cart-menu-desc{
+    margin-left: 60px;
+    padding-top: 8px ;
+}
+.cart-menu .cart-menu-desc h4{
+    color: hsl(220, 14%, 75%);
+}
+.cart-menu  .btn-delete{
+    width: 15px;
+    position: absolute;
+    right: 4px;
+    background-color: transparent;
+    top: 0px;
+}
+
+.cart-menu button{
+    width: 100%;
+    background-color: hsl(26, 100%, 55%);
+    border-radius: 5px;
+    border: none;
+    margin: 20px 0;
+    padding: 10px 0;
+    color: #fff;
+}
 .container-info .title{
     margin: 15px 0;
     font-size: 2.1rem;
@@ -300,6 +367,14 @@ nav{
         width: 65px ;
         height: 65px;
         flex: none;
+        border: solid 2px transparent;
+    }
+    .img-small a.active{
+        border: solid 2px hsl(26, 100%, 55%);
+        border-radius: 10px;
+    }
+    .img-small a:hover{
+        opacity: .5;
     }
     .img-small img{
         border-radius: 10px;
