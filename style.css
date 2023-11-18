@@ -93,7 +93,7 @@ nav{
 
 }
 .n.active{
-    z-index: 10;
+    z-index: 20;
     position: absolute;
     width: 100%;
     height: 100%;
@@ -323,7 +323,7 @@ display: block;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%,-50%);
-	z-index: 11;
+	z-index: 30;
 }
 .lightbox .show-img{
 	margin-left: auto;
@@ -368,7 +368,7 @@ display: block;
         padding-top: 120px;
         margin-left:-100% ;
         transition: all .5s cubic-bezier(.52,0,0,.97);
-        z-index: 20;
+        z-index: 10;
         padding-left: 50px;
         
 
