@@ -98,6 +98,14 @@ btnMoins.addEventListener("click", (e) => {
 btnCart.addEventListener("click", (e) => {
   e.preventDefault();
   document.querySelector(".cart-menu").classList.toggle("active");
+  if(document.querySelector('.cart-menu-body ul').children.length > 1)
+	{
+		document.querySelector(".cart-menu-body ul p.empty").style.display = "none";
+	 	document.querySelector(".cart-menu-body .btn-checkout").style.display = "block";
+	}else{
+		document.querySelector(".cart-menu-body ul p.empty").style.display = "block";
+		document.querySelector(".cart-menu-body .btn-checkout").style.display = "none";
+	}
 });
 
 //Event on the Add To cart
@@ -106,16 +114,7 @@ AddToCart.addEventListener("click", (e) => {
   //Add the new element in the cart
   if (numbreAchat.innerHTML > 0) {
     document.querySelector(".cart-menu-body ul").append(cardItem());
-	document.querySelector(".cart-menu-body ul p.empty").style.display = "none";
-
   }
-//   if(document.querySelector(".cart-menu-body ul").children.length > 1 ){
-// 	document.querySelector(".cart-menu-body ul p.empty").style.display = "none";
-// 	document.querySelector(".cart-menu-body .btn-checkout").style.display = "block";
-//   }else {
-// 	document.querySelector(".cart-menu-body ul p.empty").style.display = "block";
-// 	document.querySelector(".cart-menu-body .btn-checkout").style.display = "none";
-//   }
 
   // for delete the cart
   document.querySelectorAll(".cart-menu-body ul li").forEach((li) => {
