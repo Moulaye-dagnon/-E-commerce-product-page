@@ -37,15 +37,6 @@ btnClose.addEventListener("click", (e) => {
 
 
 //for the slider next
-// btnNext.addEventListener("click", (e) => {
-//   console.log(widthSlider);
-//   slider_img.scrollLeft += widthSlider;
-//   const sliderleft = slider_img.scrollLeft;
-//   console.log(sliderleft);
-//   if (sliderleft == widthSlider * (nbr_img - 1)) {
-	//     e.currentTarget.style.display = "none";
-	//   } else btnPrev.style.display = "block";
-	// });
 	slider_count = 0;
 	slider_img.children[slider_count].classList.add("active");
 btnNext.forEach((el) => {
@@ -114,9 +105,18 @@ AddToCart.addEventListener("click", (e) => {
   e.preventDefault();
   //Add the new element in the cart
   if (numbreAchat.innerHTML > 0) {
-    document.querySelector(".cart-menu-body ul p.empty").style.display = "none";
     document.querySelector(".cart-menu-body ul").append(cardItem());
+	document.querySelector(".cart-menu-body ul p.empty").style.display = "none";
+
   }
+//   if(document.querySelector(".cart-menu-body ul").children.length > 1 ){
+// 	document.querySelector(".cart-menu-body ul p.empty").style.display = "none";
+// 	document.querySelector(".cart-menu-body .btn-checkout").style.display = "block";
+//   }else {
+// 	document.querySelector(".cart-menu-body ul p.empty").style.display = "block";
+// 	document.querySelector(".cart-menu-body .btn-checkout").style.display = "none";
+//   }
+
   // for delete the cart
   document.querySelectorAll(".cart-menu-body ul li").forEach((li) => {
     li.querySelector("button").addEventListener("click", (e) => {
@@ -124,7 +124,6 @@ AddToCart.addEventListener("click", (e) => {
     });
   });
 });
-
 function cardItem() {
   const id = Math.floor(Math.random() * 100000);
   // Create li element
@@ -169,13 +168,14 @@ function cardItem() {
   return li;
 }
 
+
+//show  the lightbox 
 const lightbox = document.querySelector('.lightbox')
 document.querySelector('.show-img').addEventListener('click', (e)=>{
 	 document.querySelector(".n").classList.add("active");
 	 lightbox.classList.add('active')
-	
 })
-
+//Change main Image of the lightbox 
 document.querySelectorAll('.light-box-img-small a').forEach((el) => {
 	el.addEventListener("click", (e) => { 
 		e.preventDefault()
@@ -186,7 +186,7 @@ document.querySelectorAll('.light-box-img-small a').forEach((el) => {
 		document.querySelector('.lightbox-img_large').setAttribute('src', src) ;
   	});
 });
- 
+ //close the lightbox
 document.querySelector('.btn-close-lightbox').addEventListener("click", (e) => {
 	document.querySelector(".n").classList.remove("active");
 	lightbox.classList.remove('active')
